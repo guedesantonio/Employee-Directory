@@ -1,0 +1,23 @@
+.header {
+background-color: #12204B;
+
+}
+
+h1 {
+color: white;
+padding-top: 20px;
+padding-bottom: 10px;
+}
+
+p1 {
+  color: white;
+  
+  padding-bottom: 20px;
+  }
+
+  .hr {
+    color: red;
+    background-color: red;
+    height: 3px;
+
+  }

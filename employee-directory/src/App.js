@@ -5,11 +5,11 @@ import SearchBar from "./components/SearchBar";
 import EmployeeList from "./components/EmployeeList";
 function App() {
   return (
-    <Homepage>
+    <div>
       <Header/>
       <SearchBar/>
       <EmployeeList/>
-    </Homepage>
+    </div>
 
   );
 }

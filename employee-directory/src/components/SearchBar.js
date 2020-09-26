@@ -4,7 +4,7 @@ import React from "react";
 function SearchBar() {
   return (
     <nav  className="SearchBar">
-      <a >Welcome</a>
+      <p >Welcome</p>
     </nav>
   );
 }
