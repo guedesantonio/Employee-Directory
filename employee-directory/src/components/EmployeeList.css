@@ -1,5 +1,5 @@
 .row {
-border-top: 20px;
-border-left: 40px;
-border-right: 40px;
+
+  padding-top: 40px;
+  width: 90%;
 }

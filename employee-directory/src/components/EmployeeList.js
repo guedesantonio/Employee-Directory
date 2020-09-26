@@ -3,12 +3,12 @@ import './EmployeeList.css';
 
 function EmployeeList() {
   return (
-    <div class="row">
-      <div class="col">Image</div>
-      <div class="col">Name</div>
-      <div class="col">Phone</div>
-      <div class="col">Email</div>
-      <div class="col">DOB</div>
+    <div className="d-flex justify-content-center row">
+      <div className="col">Image</div>
+      <div className="col">Name</div>
+      <div className="col">Phone</div>
+      <div className="col">Email</div>
+      <div className="col">DOB</div>
     </div>
   );
 }

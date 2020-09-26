@@ -9,15 +9,15 @@ padding-top: 20px;
 padding-bottom: 10px;
 }
 
-p1 {
+p {
   color: white;
   
   padding-bottom: 20px;
-  }
+}
 
-  .hr {
+.hr {
     color: red;
     background-color: red;
     height: 3px;
 
-  }
+}
