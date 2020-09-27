@@ -2,7 +2,7 @@ import React from "react";
 import './EmployeeCard.css';
 function EmployeeCard(props) {
   return (
-      <div className={"row  list-group-item-secondary" + props.class}>
+      <div className={"row  list-group-item-secondary " + props.class}>
         <div className="col">
           <div className="container">
             <div className= "img-container">
