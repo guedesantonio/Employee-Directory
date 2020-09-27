@@ -1,17 +1,18 @@
 import React from "react";
 
-function EmployeeList() {
+function EmployeeCard(props) {
   return (
-    <div className="container-fluid text-center">
       <div className="row">
-        <div className="col">Image</div>
-        <div className="col">Name</div>
-        <div className="col">Phone</div>
-        <div className="col">Email</div>
-        <div className="col">DOB</div>
+        <div className="col">
+          <div className= "img-container">
+            <img className= "img-fluid" alt={props.name} src={props.image}/>
+          </div>
+        </div>
+        <div className="col">{props.name}</div>
+        <div className="col">{props.phone}</div>
+        <div className="col">{props.email}</div>
+        <div className="col">{props.DOB}</div>
       </div>
-      <EmployeeCard/>
-    </div>
   );
 }
 

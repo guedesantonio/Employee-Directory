@@ -1,5 +1,7 @@
 import React from "react";
 import './EmployeeList.css';
+import EmployeeCard from "./EmployeeCard";
+import employee from "./employee.json"
 
 function EmployeeList() {
   return (
@@ -11,7 +13,13 @@ function EmployeeList() {
         <div className="col">Email</div>
         <div className="col">DOB</div>
       </div>
-      <EmployeeCard/>
+      <EmployeeCard
+      image={employee[0].image}
+      name={employee[0].name}
+      phone={employee[0].phone}
+      email={employee[0].email}
+      DOB={employee[0].DOB}
+      />
     </div>
   );
 }
