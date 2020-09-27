@@ -1,17 +1,31 @@
 import React from "react";
-
+import './EmployeeCard.css';
 function EmployeeCard(props) {
   return (
-      <div className="row">
+      <div className="row  list-group-item-secondary">
         <div className="col">
-          <div className= "img-container">
-            <img className= "img-fluid" alt={props.name} src={props.image}/>
+          <div className="container">
+            <div className= "img-container">
+              <img className= "" alt={props.name} src={props.image}/>
+            </div>
           </div>
         </div>
-        <div className="col">{props.name}</div>
-        <div className="col">{props.phone}</div>
-        <div className="col">{props.email}</div>
-        <div className="col">{props.DOB}</div>
+        <div className="col">
+          <div className="text-center textbox">
+          {props.name}</div>
+          </div>
+        <div className="col">
+          <div className= "text-center textbox">
+          {props.phone}</div>
+          </div>
+        <div className="col">
+          <div className="text-center textbox">
+          {props.email}</div>
+          </div>
+        <div className="col">
+          <div className="text-center textbox">
+          {props.DOB}</div>
+          </div>
       </div>
   );
 }

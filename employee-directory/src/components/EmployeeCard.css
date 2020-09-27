@@ -1,0 +1,15 @@
+.container {
+  width: 50px;
+}
+
+.container img {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textbox {
+padding-top: 15%;
+}
