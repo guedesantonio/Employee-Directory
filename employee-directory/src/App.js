@@ -24,13 +24,16 @@ class App extends Component {
           <SearchBar/>
           <div className="container-fluid text-center">
             <EmployeeList/>
-            <EmployeeCard
-              image={employees[0].image}
-              name={employees[0].name}
-              phone={employees[0].phone}
-              email={employees[0].email}
-              DOB={employees[0].DOB}
+            {this.state.employees.map(employee=> (
+              <EmployeeCard
+              image={employee.image}
+              name={employee.name}
+              phone={employee.phone}
+              email={employee.email}
+              DOB={employee.DOB}
             />
+            ))}
+            
           </div>
       </div>
   
