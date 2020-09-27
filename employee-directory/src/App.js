@@ -32,6 +32,7 @@ class App extends Component {
               phone={employee.phone}
               email={employee.email}
               DOB={employee.DOB}
+              class={employee.class}
             />
             ))}
           </div>
