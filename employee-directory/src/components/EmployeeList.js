@@ -5,7 +5,7 @@ import employee from "./employee.json"
 
 function EmployeeList() {
   return (
-      <div className="row">
+      <div style="fontWeight:bold" className="row">
         <div className="col">Image</div>
         <div className="col">Name</div>
         <div className="col">Phone</div>
