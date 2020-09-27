@@ -1,7 +1,5 @@
 import React from "react";
-import './EmployeeList.css';
-import EmployeeCard from "./EmployeeCard";
-import employee from "./employee.json"
+
 
 function EmployeeList() {
   return (
