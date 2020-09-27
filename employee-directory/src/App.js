@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
-import EmployeeList from "./components/EmployeeList";
-import EmployeeCard from "./components/EmployeeCard";
+import Wrapper from "./components/Wrapper/Wrapper.js";
+import Header from "./components/Header/Header";
+import SearchBar from "./components/SearchBar/SearchBar";
+import EmployeeList from "./components/EmployeeList/EmployeeList";
+import EmployeeCard from "./components/EmployeeCard/EmployeeCard";
 import employees from "./employees.json"
 
 class App extends Component {
@@ -19,7 +20,7 @@ class App extends Component {
   render() {
 
     return (
-      <div>
+      <Wrapper>
           <Header/>
           <SearchBar/>
           <div className="container-fluid text-center">
@@ -33,9 +34,8 @@ class App extends Component {
               DOB={employee.DOB}
             />
             ))}
-            
           </div>
-      </div>
+      </Wrapper>
   
     );
 
