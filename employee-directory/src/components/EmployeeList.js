@@ -11,6 +11,7 @@ function EmployeeList() {
         <div className="col">Email</div>
         <div className="col">DOB</div>
       </div>
+      <EmployeeCard/>
     </div>
   );
 }
