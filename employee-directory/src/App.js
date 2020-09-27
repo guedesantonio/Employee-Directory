@@ -7,13 +7,22 @@ import EmployeeCard from "./components/EmployeeCard/EmployeeCard";
 import employees from "./employees.json"
 
 class App extends Component {
-
+// Setting the component's initial state
   state = {
-    employees : employees
+    employees : employees,
+    searchName: ""
+
 
   }
 
-  searchName = () => {};
+  handleInputChange = event => {
+   // Getting the value and name of the input which triggered the change 
+    let value = event.target.value;
+  
+    this.setState({
+      searchName: value
+    });
+  };
 
 
   render() {
@@ -21,10 +30,12 @@ class App extends Component {
     return (
       <Wrapper>
           <Header/>
-          <form className="d-flex justify-content-center form-inline">
+          <form className="form d-flex justify-content-center form-inline">
           <input 
+            value={this.state.searchName}
             className="form-control mr-sm-2" 
-            type="search" 
+            type="text"
+            onChange={this.handleInputChange}
             placeholder="Search" 
             aria-label="Search">
           </input>
@@ -38,7 +49,7 @@ class App extends Component {
               phone={employee.phone}
               email={employee.email}
               DOB={employee.DOB}
-              class={employee.class}
+              class={(employee.name.includes(this.state.searchName))?employee.class:"d-none"}
             />
             ))}
           </div>
