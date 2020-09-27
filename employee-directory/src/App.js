@@ -3,8 +3,8 @@ import './App.css';
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import EmployeeList from "./components/EmployeeList";
-import EmployeeList from "./components/EmployeeCard";
-import employee from "./employees.json"
+import EmployeeCard from "./components/EmployeeCard";
+import employees from "./employees.json"
 
 class App extends Component {
 
@@ -25,11 +25,11 @@ class App extends Component {
           <div className="container-fluid text-center">
             <EmployeeList/>
             <EmployeeCard
-              image={employee[0].image}
-              name={employee[0].name}
-              phone={employee[0].phone}
-              email={employee[0].email}
-              DOB={employee[0].DOB}
+              image={employees[0].image}
+              name={employees[0].name}
+              phone={employees[0].phone}
+              email={employees[0].email}
+              DOB={employees[0].DOB}
             />
           </div>
       </div>
