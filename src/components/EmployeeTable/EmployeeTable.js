@@ -14,9 +14,9 @@ function EmployeeTable(props) {
         <tr>
           <th onClick={props.sort} value="name" scope="col">Image </th>
           <th onClick={props.sort} value="name" scope="col">Name</th>
-          <th onClick={props.sort} value="name" scope="col">Phone</th>
-          <th onClick={props.sort} value="name" scope="col">Email</th>
-          <th onClick={props.sort} value="name" scope="col">DOB</th>
+          <th onClick={props.sort} value="phone" scope="col">Phone</th>
+          <th onClick={props.sort} value="email" scope="col">Email</th>
+          <th onClick={props.sort} value="DOB" scope="col">DOB</th>
         </tr>
       </thead>
       <tbody>

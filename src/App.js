@@ -39,11 +39,44 @@ class App extends Component {
           return 0;
         });
         break;
-      // case y:
-      //   // code block
-      //   break;
+      case "email":
+        sortedEmployees = [...employees]
+        sortedEmployees.sort((a, b) => {
+          if (a.email < b.email) {
+            return -1;
+          }
+          if (a.email > b.email) {
+            return 1;
+          }
+          return 0;
+        });
+        break;
+      case "phone":
+        sortedEmployees = [...employees]
+        sortedEmployees.sort((a, b) => {
+          if (a.phone < b.phone) {
+            return -1;
+          }
+          if (a.phone > b.phone) {
+            return 1;
+          }
+          return 0;
+        });
+        break;
+        case "DOB":
+        sortedEmployees = [...employees]
+        sortedEmployees.sort((a, b) => {
+          if (a.DOB < b.DOB) {
+            return -1;
+          }
+          if (a.DOB > b.DOB) {
+            return 1;
+          }
+          return 0;
+        });
+        break;
       default:
-      // code block
+
     }
 
 
