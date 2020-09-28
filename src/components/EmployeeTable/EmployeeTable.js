@@ -1,9 +1,15 @@
 import React from "react";
 import EmployeeRow from "../EmployeeRow/EmployeeRow";
 
+const styles = {
+  tableStyle: {
+    border: "20px"
+  }
+};
+
 function EmployeeTable(props) {
   return (
-    <table class="table">
+    <table style={styles.tableStyle} class="table table-hover table-striped">
       <thead>
         <tr>
         {/* onClick={() => props.sort("image")} */}

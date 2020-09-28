@@ -7,40 +7,33 @@ import EmployeeTable from "./components/EmployeeTable/EmployeeTable";
 import employees from "./employees.json"
 
 class App extends Component {
-// Setting the component's initial state
+  // Setting the component's initial state
   state = {
-    employees : employees,
+    employees: employees,
     searchName: ""
   }
 
   handleInputChange = event => {
-   // Getting the value and name of the input which triggered the change 
+    // Getting the value and name of the input which triggered the change 
     let value = event.target.value;
-  
+
     this.setState({
       searchName: value
     });
   };
 
-
   render() {
 
     return (
       <Wrapper>
-          <Header/>
-          <SearchBox  searchName={this.state.searchName} handleInputChange={this.handleInputChange}/>
-          <div className="container-fluid text-center">
-            <EmployeeTable  employees={this.state.employees} searchName={this.state.searchName}/>
-          </div>
+        <Header />
+        <SearchBox searchName={this.state.searchName} handleInputChange={this.handleInputChange} />
+        <EmployeeTable employees={this.state.employees} searchName={this.state.searchName} />
       </Wrapper>
-  
     );
-
-
   }
 
 }
-
 
 export default App;
 

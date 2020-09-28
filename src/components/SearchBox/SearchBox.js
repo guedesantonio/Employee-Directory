@@ -1,9 +1,15 @@
 import React from "react";
 
+const styles = {
+  formStyle: {
+    padding: "20px"
+  }
+};
+
 function SearchBox(props) {
   return (
 
-    <form className="form d-flex justify-content-center form-inline">
+    <form style={styles.formStyle} className="form d-flex justify-content-center form-inline">
       <input
         value={props.searchName}
         className="form-control mr-sm-2"
