@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Wrapper from "./components/Wrapper/Wrapper.js";
 import Header from "./components/Header/Header";
-import EmployeeList from "./components/EmployeeList/EmployeeList";
-import EmployeeCard from "./components/EmployeeCard/EmployeeCard";
+import EmployeeTable from "./components/EmployeeTable/EmployeeTable";
 import employees from "./employees.json"
 
 class App extends Component {
@@ -11,8 +10,6 @@ class App extends Component {
   state = {
     employees : employees,
     searchName: ""
-
-
   }
 
   handleInputChange = event => {
@@ -41,17 +38,7 @@ class App extends Component {
           </input>
           </form>
           <div className="container-fluid text-center">
-            <EmployeeList/>
-            {this.state.employees.map(employee=> (
-              <EmployeeCard
-              image={employee.image}
-              name={employee.name}
-              phone={employee.phone}
-              email={employee.email}
-              DOB={employee.DOB}
-              class={(employee.name.includes(this.state.searchName))?employee.class:"d-none"}
-            />
-            ))}
+            <EmployeeTable employees={this.state.employees} searchName={this.state.searchName}/>
           </div>
       </Wrapper>
   
