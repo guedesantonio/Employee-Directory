@@ -12,11 +12,11 @@ function EmployeeTable(props) {
     <table  style={styles.tableStyle} className="table table-hover table-striped">
       <thead>
         <tr>
-          <th  scope="col">Image </th>
-          <th onClick={() => props.sort()} scope="col">Name</th>
-          <th scope="col">Phone</th>
-          <th scope="col">Email</th>
-          <th scope="col">DOB</th>
+          <th onClick={props.sort} value="name" scope="col">Image </th>
+          <th onClick={props.sort} value="name" scope="col">Name</th>
+          <th onClick={props.sort} value="name" scope="col">Phone</th>
+          <th onClick={props.sort} value="name" scope="col">Email</th>
+          <th onClick={props.sort} value="name" scope="col">DOB</th>
         </tr>
       </thead>
       <tbody>

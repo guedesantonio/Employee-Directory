@@ -24,10 +24,31 @@ class App extends Component {
 
   sort = event => {
     // Getting the value and name of the input which triggered the change 
-    let value = this.employees.sort(event);
+    let value = event.target.getAttribute("value");
+    let sortedEmployees = [];
+    switch (value) {
+      case "name":
+        sortedEmployees = [...employees]
+        sortedEmployees.sort((a, b) => {
+          if (a.name < b.name) {
+            return -1;
+          }
+          if (a.name > b.name) {
+            return 1;
+          }
+          return 0;
+        });
+        break;
+      // case y:
+      //   // code block
+      //   break;
+      default:
+      // code block
+    }
+
 
     this.setState({
-      employees: value
+      employees: sortedEmployees
     });
   };
 
@@ -37,7 +58,7 @@ class App extends Component {
       <Wrapper>
         <Header />
         <SearchBox searchName={this.state.searchName} handleInputChange={this.handleInputChange} />
-        <EmployeeTable sort ={this.sort} employees={this.state.employees} searchName={this.state.searchName} />
+        <EmployeeTable sort={this.sort} employees={this.state.employees} searchName={this.state.searchName} />
       </Wrapper>
     );
   }
@@ -46,4 +67,3 @@ class App extends Component {
 
 export default App;
 
-// sort ={this.sort}
