@@ -27,6 +27,10 @@ class App extends Component {
     return (
       <Wrapper>
           <Header/>
+
+
+
+
           <form className="form d-flex justify-content-center form-inline">
           <input 
             value={this.state.searchName}
@@ -38,7 +42,7 @@ class App extends Component {
           </input>
           </form>
           <div className="container-fluid text-center">
-            <EmployeeTable employees={this.state.employees} searchName={this.state.searchName}/>
+            <EmployeeTable  employees={this.state.employees} searchName={this.state.searchName}/>
           </div>
       </Wrapper>
   
@@ -51,3 +55,5 @@ class App extends Component {
 
 
 export default App;
+
+// sort ={this.sort}
