@@ -2,7 +2,7 @@ import React from "react";
 import './EmployeeRow.css';
 function EmployeeRow(props) {
   return (
-    <tr>
+    <tr className={props.class}>
       <td>
         <div className="img-container">
           <img className="" alt={props.name} src={props.image} />
@@ -18,29 +18,3 @@ function EmployeeRow(props) {
 }
 
 export default EmployeeRow;
-
-// {/* <div className={"row  list-group-item-secondary " + props.class}>
-//         <div className="col">
-//           <div className="container">
-//             <div className= "img-container">
-//               <img className= "" alt={props.name} src={props.image}/>
-//             </div>
-//           </div>
-//         </div>
-//         <div className="col">
-//           <div className="text-center textbox">
-//           {props.name}</div>
-//           </div>
-//         <div className="col">
-//           <div className= "text-center textbox">
-//           {props.phone}</div>
-//           </div>
-//         <div className="col">
-//           <div className="text-center textbox">
-//           {props.email}</div>
-//           </div>
-//         <div className="col">
-//           <div className="text-center textbox">
-//           {props.DOB}</div>
-//           </div>
-//       </div> */}
