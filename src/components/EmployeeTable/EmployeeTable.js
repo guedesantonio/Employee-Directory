@@ -2,14 +2,14 @@ import React from "react";
 import EmployeeRow from "../EmployeeRow/EmployeeRow";
 
 const styles = {
-  tableStyle: {
-    border: "20px"
+  containerStyle: {
+    padding: "20px"
   }
 };
 
 function EmployeeTable(props) {
   return (
-    <table style={styles.tableStyle} class="table table-hover table-striped">
+    <table  style={styles.tableStyle} class="table table-hover table-striped">
       <thead>
         <tr>
         {/* onClick={() => props.sort("image")} */}
@@ -33,6 +33,7 @@ function EmployeeTable(props) {
         ))}
       </tbody>
     </table>
+
   );
 
 }
