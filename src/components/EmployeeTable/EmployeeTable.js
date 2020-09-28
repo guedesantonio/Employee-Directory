@@ -28,7 +28,7 @@ function EmployeeTable(props) {
             phone={employee.phone}
             email={employee.email}
             DOB={employee.DOB}
-            class={(employee.name.includes(props.searchName)) ? employee.class : "d-none"}
+            class={(employee.name.toLowerCase().includes(props.searchName.toLowerCase())) ? employee.class : "d-none"}
           />
         ))}
       </tbody>
@@ -39,5 +39,4 @@ function EmployeeTable(props) {
 }
 
 export default EmployeeTable;
-
 
