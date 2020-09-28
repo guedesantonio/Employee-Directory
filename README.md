@@ -29,7 +29,7 @@ The user should be able to:
   * Sort the table by clicking on the categories.
 
   * Search the employees names on the Search Bar.
-  ![EmployeeDirectory](./employee-directory/public/employeedirectorySS.png)
+  ![EmployeeDirectory](./public/employeedirectorySS.png)
 
 
   ## License
