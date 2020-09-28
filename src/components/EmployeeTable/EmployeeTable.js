@@ -9,12 +9,11 @@ const styles = {
 
 function EmployeeTable(props) {
   return (
-    <table  style={styles.tableStyle} class="table table-hover table-striped">
+    <table  style={styles.tableStyle} className="table table-hover table-striped">
       <thead>
         <tr>
-        {/* onClick={() => props.sort("image")} */}
           <th  scope="col">Image </th>
-          <th scope="col">Name</th>
+          <th onClick={() => props.sort()} scope="col">Name</th>
           <th scope="col">Phone</th>
           <th scope="col">Email</th>
           <th scope="col">DOB</th>
@@ -23,6 +22,7 @@ function EmployeeTable(props) {
       <tbody>
         {props.employees.map(employee => (
           <EmployeeRow
+            key={employee.id}
             image={employee.image}
             name={employee.name}
             phone={employee.phone}

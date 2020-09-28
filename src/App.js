@@ -22,13 +22,22 @@ class App extends Component {
     });
   };
 
+  sort = event => {
+    // Getting the value and name of the input which triggered the change 
+    let value = this.employees.sort(event);
+
+    this.setState({
+      employees: value
+    });
+  };
+
   render() {
 
     return (
       <Wrapper>
         <Header />
         <SearchBox searchName={this.state.searchName} handleInputChange={this.handleInputChange} />
-        <EmployeeTable employees={this.state.employees} searchName={this.state.searchName} />
+        <EmployeeTable sort ={this.sort} employees={this.state.employees} searchName={this.state.searchName} />
       </Wrapper>
     );
   }
