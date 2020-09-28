@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Wrapper from "./components/Wrapper/Wrapper.js";
+import SearchBox from "./components/SearchBox/SearchBox.js";
 import Header from "./components/Header/Header";
 import EmployeeTable from "./components/EmployeeTable/EmployeeTable";
 import employees from "./employees.json"
@@ -27,20 +28,7 @@ class App extends Component {
     return (
       <Wrapper>
           <Header/>
-
-
-
-
-          <form className="form d-flex justify-content-center form-inline">
-          <input 
-            value={this.state.searchName}
-            className="form-control mr-sm-2" 
-            type="text"
-            onChange={this.handleInputChange}
-            placeholder="Search" 
-            aria-label="Search">
-          </input>
-          </form>
+          <SearchBox  searchName={this.state.searchName} handleInputChange={this.handleInputChange}/>
           <div className="container-fluid text-center">
             <EmployeeTable  employees={this.state.employees} searchName={this.state.searchName}/>
           </div>
